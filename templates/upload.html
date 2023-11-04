@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Upload and Extraction</title>
+</head>
+<body>
+    <h1>Upload a PDF File</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".pdf" required>
+        <input type="submit" value="Upload and Extract">
+        
+    </form>
+
+    {% if text %}
+        <h2>Extracted Text:</h2>
+        <p>{{ text }}</p>
+    {% endif %}
+</body>
+</html>
